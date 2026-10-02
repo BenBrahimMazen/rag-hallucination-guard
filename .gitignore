@@ -1,0 +1,23 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Whitelist-mode .gitignore: everything is ignored EXCEPT the files listed
+# below. Anything new added to this folder stays private by default — it must
+# be explicitly listed here to be published.
+#
+# Deliberately kept out of the public repo (course administration material,
+# grading spreadsheets, defense documents, build tooling, editor state):
+#   - "Projet LLM — AI 2026–2027.xlsx"        (course rubric — private)
+#   - Projet_RAG_Hallucination_Description.pdf (course handout)
+#   - Claude_Code_Prompt_Projet_RAG.md         (private working notes)
+#   - notebook.pdf, Soutenance_*               (defense materials, 15 MB+)
+#   - _build/                                  (disposable notebook build tooling)
+#   - .kilo/, __pycache__/
+# ─────────────────────────────────────────────────────────────────────────────
+
+/*
+
+# ── Published ────────────────────────────────────────────────────────────────
+!.gitignore
+!README.md
+!projet_rag_hallucination.ipynb
+!figures/
+!figures/**
