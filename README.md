@@ -9,9 +9,8 @@
 ![Dataset](https://img.shields.io/badge/Dataset-RAGTruth-FFB000)
 ![Runs on](https://img.shields.io/badge/Runs_on-Colab_T4_GPU-0F9D58)
 
-**Author:** Mazen Ben Brahim — individual project
-**Context:** Advanced NLP/LLM university course — Topic n°15 *“Hallucination Detection and Mitigation in RAG”* (advanced track), supervised by Mme Tasnim Hamdeni
-**Notebook language:** French (course requirement) · **This README:** English
+**Author:** Mazen Ben Brahim
+**Notebook language:** French · **This README:** English
 
 > 📓 [**`projet_rag_hallucination.ipynb`**](projet_rag_hallucination.ipynb) — the full annotated notebook, runs top-to-bottom on a free Google Colab T4 in **≈ 40–50 min**.
 
@@ -192,7 +191,7 @@ Recruiter-relevant implementation details, each visible in the notebook code:
 - **Judge output parsing** — strict regex + one bounded re-ask; unparsed sentences are counted and excluded transparently, never silently imputed.
 - **LLM calls wrapped with exponential-backoff retries** (2/4/8 s) and CUDA cache clearing — survives transient OOM on shared GPUs.
 - **Pandas `NaN` truthiness** — deleted sentences are stored as `NaN`, which is truthy; all checks use `pd.isna()` (commented in the code, because it *will* bite the next reader).
-- **Prompts in English, notebook in French** — models follow English instructions better; the deliverable stays in the course language. Documented at the call site.
+- **Prompts in English, notebook in French** — models follow English instructions better; the notebook stays in French. Documented at the call site.
 
 ---
 
@@ -227,9 +226,3 @@ Full bibliography (15 entries) in notebook §8. Core ones:
 - Zheng et al. (2023), *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*, NeurIPS — [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
 - Lewis et al. (2020), *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*, NeurIPS — [arXiv:2005.11401](https://arxiv.org/abs/2005.11401)
 - Ji et al. (2023), *Survey of Hallucination in Natural Language Generation*, ACM CSUR — [arXiv:2202.03629](https://arxiv.org/abs/2202.03629)
-
----
-
-## AI-assistance disclosure
-
-Per the course's integrity policy: **Claude Code (Anthropic) was used as a development assistant** for notebook code structure and first-draft section text, under the direction of the author. All methodology decisions — dataset, models, thresholds, DEV/TEST protocol, hypotheses, sample sizes — were made and validated by the author, who ran and verified the full pipeline. **No data point or result was fabricated**: every figure in this README comes from the executed notebook on real RAGTruth data.
